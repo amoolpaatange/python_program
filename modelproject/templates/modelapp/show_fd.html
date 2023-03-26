@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 align="center"> Student list</h1>
+{% if stud_list %}
+<table border="1px" align="center">
+    <thead>
+    <th> ID</th>
+    <th> NAME </th>
+    <th> AGE </th>
+    <th> CITY </th>
+
+    </thead>
+{% for student in stud_list %}
+<tr>
+    <td>{{student.id}}</td>
+    <td>{{student.name}}</td>
+    <td>{{student.age}}</td>
+    <td>{{student.city}}</td>
+
+
+</tr>
+{%endfor%}
+</table>
+{%else%}
+<h1> No Data found</h1>
+
+{%endif%}
+</body>
+</html>

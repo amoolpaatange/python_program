@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% if  prd_list %}
+<table  border="1"  margin="auto" align="center">
+<tr>
+    <th> ID</th>
+    <th> dept_name</th>
+    <th> dept_city</th>
+    <th> dept_id</th>
+</tr>
+    {% for prd in   prd_list %}
+    <tr>
+    <td> {{prd.id}}</td>
+    <td> {{prd.dept_name}}</td>
+    <td> {{prd.dept_city}}</td>
+    <td> {{prd.dept_id}}</td>
+</tr>
+{%endfor %}
+</table>
+{% else %}
+<h1> No data found</h1>
+
+{% endif %}
+<h2> table::{{'prd'}}</h2>
+
+
+
+{% if  prd_list1 %}
+<table  border="1"  margin="auto" align="center">
+<tr>
+    <th> ID</th>
+    <th> dept_name</th>
+    <th> dept_city</th>
+
+</tr>
+    {% for prd1 in   prd_list1 %}
+    <tr>
+    <td> {{prd1.id}}</td>
+    <td> {{prd1.dept_name}}</td>
+    <td> {{prd1.dept_city}}</td>
+
+</tr>
+{%endfor %}
+</table>
+{% else %}
+<h1> No data found</h1>
+
+{% endif %}
+<h2> table::{{'prd1'}}</h2>
+
+
+</body>
+</html>
